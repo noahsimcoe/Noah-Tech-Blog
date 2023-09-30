@@ -46,3 +46,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 
+tables?
+    user (id, username, password)
+    post (id, title, content, time, user_id, comments?)
+    comment (id, content, time, user_id, post_id)
