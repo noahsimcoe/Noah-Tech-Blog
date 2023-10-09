@@ -1,10 +1,12 @@
 <h2>Homepage Handlebars Text</h2>
 
-<section>
-    <div>
-        <ul>{{#each posts as |post| }}
-            <li><h3>{{post.title}}</h3><br>{{post.description}}</li>
-            {{/each}}
-        </ul>
-    </div>
-</section>
+{{#each posts as |post| }}
+
+    <h2>
+      <a href="/post/{{post.id}}">{{post.title}}</a>
+    </h2>
+    <p>Created by {{post.user.username}} on {{post.time}}</p>
+    <p>
+      {{post.description}}
+    </p>
+{{/each}}

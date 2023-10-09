@@ -40,7 +40,3 @@ Post.init(
 );
 
 module.exports = Post;
-
-
-
-// comments?
