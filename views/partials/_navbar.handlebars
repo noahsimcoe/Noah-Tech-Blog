@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <h1>
+        <a href="/">Tech Blog</a>
+    </h1>
+    <div>
+        {{#if logged_in}}
+        <a id="logout">Logout</a>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+    </div>
+</nav>
