@@ -2,6 +2,10 @@
     text-decoration: none;
 }
 
+.navbar a {
+    margin-left: 15px;
+}
+
 .card-space {
     margin-bottom: 30px;
 }
@@ -17,3 +21,8 @@
 .idv-card h4 {
     margin-bottom: 25px;
 }
+
+.lucid h2 {
+    color:black;
+}
+
