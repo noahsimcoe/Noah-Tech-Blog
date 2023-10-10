@@ -1,0 +1,19 @@
+.navbar {
+    text-decoration: none;
+}
+
+.card-space {
+    margin-bottom: 30px;
+}
+
+.card-space h2 {
+    margin-bottom: 0px;
+}
+
+.idv-card h6 {
+    margin-bottom: 0px;
+}
+
+.idv-card h4 {
+    margin-bottom: 25px;
+}

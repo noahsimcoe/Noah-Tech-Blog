@@ -1,11 +1,11 @@
-<div>
+<div class="idv-card">
     <h2>{{title}}</h2>
-    <h4>{{description}}</h4>
     <h6>Created by {{user.username}} on {{format_date time}}</h6>
+    <p>{{description}}</p>
     <br>
-    <h3>Comments:</h3>
+    <h4>This post's comments:</h4>
     {{#each comments as |comment| }}
-        <h3>{{comment.description}}</h3>
-        <h5>-{{comment.user.username}}</h5>
+        <h6>{{comment.description}}</h6>
+        <p>-{{comment.user.username}}</p>
     {{/each}}
 </div>
