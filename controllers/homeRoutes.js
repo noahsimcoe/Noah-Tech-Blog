@@ -65,17 +65,21 @@ router.get('/post', withAuth, async (req, res) => {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
       });
-      const postData = await Post.findByPk(req.session.user_id, {
+      const postData = await Post.findAll({
+        where: {
+            user_id: req.session.user_id
+        }
       });
-
       const user = userData.get({ plain: true });
-      const posts = postData.get({ plain: true });
+      const posts = postData.map(post => post.get({ plain: true }));
 
       res.render('post', {
         posts,
         ...user,
         logged_in: true
       });
+      console.log(posts);
+      console.log(req.session.user_id);
     } catch (err) {
       res.status(500).json(err);
     }
