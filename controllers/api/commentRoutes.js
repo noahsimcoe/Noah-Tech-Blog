@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
         const commentData = await Comment.create(req.body);
 
         req.session.save(() => {
-            req.session.user_id = commentData.user_id;
+            req.session.user_id = commentData.id;
             req.session.post_id = commentData.post_id;
             req.session.logged_in = true;
 
