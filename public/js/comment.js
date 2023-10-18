@@ -3,7 +3,7 @@ const commentFormHandler = async (event) => {
 
     const description = document.querySelector("#comment-description").value.trim();
 
-    if (username && password) {
+    if (description) {
         const response = await fetch ('/api/comments/', {
             method: 'POST',
             body: JSON.stringify({ description }),
