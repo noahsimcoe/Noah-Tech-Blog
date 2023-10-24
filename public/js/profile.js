@@ -39,10 +39,6 @@ const newFormHandler = async (event) => {
     }
   };
 
-  // const delButtonHandler = (event) => {
-  //   console.log(event);
-  // };
-
   document
     .querySelector('.new-post-form')
     .addEventListener('submit', newFormHandler);

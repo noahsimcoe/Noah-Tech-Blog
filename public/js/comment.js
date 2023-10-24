@@ -4,7 +4,7 @@ const commentFormHandler = async (event) => {
     const description = document.querySelector("#comment-description").value.trim();
 
     if (description) {
-        const response = await fetch ('/api/comments/', {
+        const response = await fetch (`/api/comments`, {
             method: 'POST',
             body: JSON.stringify({ description }),
             headers: {
@@ -13,8 +13,8 @@ const commentFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            // If you sign up successfully, this routes you back to the homepage
-            document.location.replace('/');
+            console.log(`Success. Comment created: ${response}`);
+
         } else {
             alert(response.statusText);
         }
@@ -24,3 +24,4 @@ const commentFormHandler = async (event) => {
 document
   .querySelector('.new-comment-form')
   .addEventListener('submit', commentFormHandler);
+
