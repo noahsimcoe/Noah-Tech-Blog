@@ -21,26 +21,32 @@ const newFormHandler = async (event) => {
     }
   };
 
-  // const delButtonHandler = async (event) => {
-  //   if (event.target.hasAttribute('data-id')) {
-  //     const id = event.target.getAttribute('data-id');
+  const delButtonHandler = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
 
-  //     const response = await fetch(`/api/posts/${id}`, {
-  //       method: 'DELETE',
-  //     });
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+      });
 
-  //     if (response.ok) {
-  //       document.location.replace('/dashboard');
-  //     } else {
-  //       alert('Failed to delete post');
-  //     }
-  //   }
+      console.log(response);
+
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to delete post');
+      }
+    }
+  };
+
+  // const delButtonHandler = (event) => {
+  //   console.log(event);
   // };
 
   document
     .querySelector('.new-post-form')
     .addEventListener('submit', newFormHandler);
 
-  // document
-  //   .querySelector('.post-list')
-  //   .addEventListener('click', delButtonHandler);
+  document
+    .querySelector('.post-list')
+    .addEventListener('click', delButtonHandler);

@@ -1,31 +1,22 @@
 # Noah-Tech-Blog
+Challenge 14
 
-GIVEN a CMS-style blog site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-WHEN I click on the homepage option
-THEN I am taken to the homepage
+## Description
+During this project I demonstrated my understanding of working on a back end. I proved that I know how to configure a working Express.js API and that I could use Sequelize to interact with a MySQL database. I also proved that I know how to enter schema and seed commands to populate fake data in my application's database.Regrading the API routes, I wrote GET, PUT, DELETE, and POST routes for the different tables of data on this application, and they can be tested in Insomnia to view their functionality.
 
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
+## Installation
+This project is NOT deployed on GitHub Pages, but installation and usage of the project can be viewed in the screencastify video linked at the end of the README file.
 
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+Some of the packages that are required though (to help connect your Express.js API to a MySQL database are [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize), and the [dotenv](https://www.npmjs.com/package/dotenv) package is to use environment variables to store sensitive data.
 
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+## Usage
+This project is used as an example of what the back end of an application may look like. It can be used as a reference to see how Sequelize is used to connect to a MySQL database, it shows how tables/fake data are created and seeded on an application, and it provides a lot of examples of writted routes that follow the CRUD operations that can be used/tested in Insomnia for further learning.
+
+## Video Submission
+https://drive.google.com/file/d/1-ninKEnQazyozfqHMbK7JWDIsyhCxua8/view
 
 WHEN I enter a comment and click on the submit button while signed in
 THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+
 WHEN I click on one of my existing posts in the dashboard
 THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
