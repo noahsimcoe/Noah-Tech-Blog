@@ -2,19 +2,17 @@
 Challenge 14
 
 ## Description
-During this project I demonstrated my understanding of working on a back end. I proved that I know how to configure a working Express.js API and that I could use Sequelize to interact with a MySQL database. I also proved that I know how to enter schema and seed commands to populate fake data in my application's database.Regrading the API routes, I wrote GET, PUT, DELETE, and POST routes for the different tables of data on this application, and they can be tested in Insomnia to view their functionality.
+During this project I demonstrated my understanding of creating my first official full-stack web application from scratch. I proved that I know how to configure a working Express.js API and that I could use Sequelize to interact with a MySQL database. I also proved that I know how to enter schema and seed commands to populate fake data in my application's database. Regrading API routes, I successfully demonstrated my ability to write GET, DELETE, and POST routes for the different tables of data on this application. I also created user authentication, used handlebars to create different views on my application, and even utilized many different npm packages to speed up the creation of my application.
 
 ## Installation
-This project is NOT deployed on GitHub Pages, but installation and usage of the project can be viewed in the screencastify video linked at the end of the README file.
-
-Some of the packages that are required though (to help connect your Express.js API to a MySQL database are [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize), and the [dotenv](https://www.npmjs.com/package/dotenv) package is to use environment variables to store sensitive data.
+This project is deployed on Heroku and can be viewed [here](https://tech-blog-84849999-1510562f600e.herokuapp.com/).
 
 ## Usage
-This project is used as an example of what the back end of an application may look like. It can be used as a reference to see how Sequelize is used to connect to a MySQL database, it shows how tables/fake data are created and seeded on an application, and it provides a lot of examples of writted routes that follow the CRUD operations that can be used/tested in Insomnia for further learning.
+This project can be used as an example of how a blog application would function. THe user has the ability to create an account, and once they are logged in, they can create posts of their own that will display on the homepage. Logged in users will also be able to leave comments on other blog posts, and they can also choose to delete their own posts if they want. Users additionally have the option to log out manually, or will be automatically logged out after a certain period of time on the application.
 
 ## Video Submission
-https://drive.google.com/file/d/1-ninKEnQazyozfqHMbK7JWDIsyhCxua8/view
 
+## Outstanding fixes needed
 WHEN I enter a comment and click on the submit button while signed in
 THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
 
