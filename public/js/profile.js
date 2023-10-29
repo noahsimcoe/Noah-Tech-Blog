@@ -22,6 +22,7 @@ const newFormHandler = async (event) => {
   };
 
   const delButtonHandler = async (event) => {
+    event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
 
@@ -38,6 +39,18 @@ const newFormHandler = async (event) => {
       }
     }
   };
+
+//   const deletePostHandler = async (event) => {
+//     event.preventDefault();
+//     const postId = document.querySelector('input[name="post-id"]').value;
+//     await fetch(`/api/post/${postId}`, {
+//         method: 'DELETE'
+//     })
+//     .then(function() {
+//         document.location.replace('/dashboard');
+//     })
+//     .catch(err => console.log(err))
+// }
 
   document
     .querySelector('.new-post-form')

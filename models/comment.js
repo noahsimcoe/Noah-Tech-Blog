@@ -20,6 +20,7 @@ Comment.init(
             references: {
                 model: 'post',
                 key: 'id',
+                onDelete: 'CASCADE',
             },
         },
         user_id: {
@@ -27,6 +28,7 @@ Comment.init(
             references: {
                 model: 'user',
                 key: 'id',
+                onDelete: 'CASCADE'
             },
         },
     },
