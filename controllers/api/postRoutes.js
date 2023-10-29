@@ -15,9 +15,9 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     try {
-      const postData = await Post.destroy({
+      Post.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
@@ -33,7 +33,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 // GET ROUTE - Find all of the posts
 router.get('/', async (req, res) => {
