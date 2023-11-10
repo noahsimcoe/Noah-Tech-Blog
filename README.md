@@ -10,11 +10,5 @@ This project is deployed on Heroku and can be viewed [here](https://tech-blog-84
 ## Usage
 This project can be used as an example of how a blog application would function. THe user has the ability to create an account, and once they are logged in, they can create posts of their own that will display on the homepage. Logged in users will also be able to leave comments on other blog posts, and they can also choose to delete their own posts if they want. Users additionally have the option to log out manually, or will be automatically logged out after a certain period of time on the application.
 
-## Video Submission
-
-## Outstanding fixes needed
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
+## Snapshot of Application
+![project image](public/deployedApp.jpg)
